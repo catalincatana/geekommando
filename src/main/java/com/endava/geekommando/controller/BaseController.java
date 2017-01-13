@@ -21,33 +21,25 @@ import java.util.Map;
 @Controller
 public class BaseController {
 
-    private static final String VIEW_INDEX = "index";
+
 
     @Autowired
     private GeneralService generalService;
 
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public String addStudent(@ModelAttribute("userForm") User user,
-                             ModelMap model) {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String addStudent (ModelMap model) {
 
         String date = generalService.getDate();
         String localIP = generalService.getIP();
         // Spring uses InternalResourceViewResolver and return back index.jsp
-        model.addAttribute("name", user.getName());
+
         model.addAttribute("data",date);
         model.addAttribute("localIP",localIP);
 
-
-        return "result";
+        return "index";
     }
 
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String welcome(@ModelAttribute("userForm") User user, ModelMap model) {
-
-        return VIEW_INDEX;
-
-    }
 
 }

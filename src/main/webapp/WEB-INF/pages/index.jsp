@@ -13,20 +13,16 @@
 
 </head>
 <body>
-<h2>Application Management Rocks because of:</h2>
-<form:form method="POST" action="/" commandName="userForm">
-    <table>
-        <tr>
-            <td>State your Name MyLord:</td>
-            <td><form:input path="name" /></td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <input type="submit" value="Submit"/>
-            </td>
-        </tr>
-    </table>
-</form:form>
+<h2>AM Academy - Implementing a Continous Delivery Pipeline for a Java web application</h2>
+<h2>Hello Summer</h2>
+<br>
+
+            Data de astazi este: ${data}
+
+            <br>
+
+            Ip-ul masinii curente este: ${localIP}
+
+
 </body>
 </html>
-
